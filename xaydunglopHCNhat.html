@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+</head>
+<body>
+<input type="number" id="input1" placeholder="InputWidth"> <p id="result1"></p>
+<br> <br>
+<input type="number" id="input2" placeholder="InputHeight">  <p id="result2"></p>
+<br> <br>
+<button type="button" onclick="check()">Result</button>
+<button type="button" onclick="reset()">Reset</button>
+<br> <br>
+<canvas id="Mycanvas" width="500px" height="500px" style="border: 2px solid "></canvas>
+<script>
+    
+    class Rectangle {
+        width;
+        height;
+
+        constructor(width,height) {
+            this.width = width;
+            this.height = height;
+        }
+        getWidth() {
+            return this.width
+        }
+        getHeight() {
+            return this.height
+        }
+        getArea(){
+            return this.width*this.height
+        }
+        getPerimeter(){
+            return (this.height + this.width)*2;
+        }
+    }
+ function   drawRectangle(ctx,x,y){
+        ctx.beginPath();
+        ctx.fillStyle='green'
+        ctx.rect(100,100,x,y);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+    }
+    function check(){
+        let x=+document.getElementById('input1').value;
+        let y=+document.getElementById('input2').value;
+        let canvas=document.getElementById('Mycanvas');
+        let ctx=canvas.getContext('2d');
+        drawRectangle(ctx,x,y)
+        let rectangle= new Rectangle(x,y);
+        document.getElementById('result1').innerText='chu vi hình chữ nhât là:  '  + rectangle.getPerimeter();
+        document.getElementById('result2').innerText='Diện tích hình chữ nhật là:  '+ rectangle.getArea();
+    }
+    function reset(){
+        document.getElementById('input1').value='';
+        document.getElementById('input2').value='';
+        document.getElementById('result1').innerText='';
+        document.getElementById('result2').innerText='';
+        let ctx=document.getElementById('Mycanvas').getContext('2d');
+        ctx.clearRect(0,0,500,500);
+    }
+</script>
+</body>
+</html>

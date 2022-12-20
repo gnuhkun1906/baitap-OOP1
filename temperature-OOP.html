@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" min="-273" id="input3">
+<button onclick="check()">Change</button>
+<br> <br>
+<p id="changeF"></p>
+<p id="changeK"></p>
+<script>
+    class Temperature {
+        doC;
+
+        constructor(doC) {
+            this.doC = doC;
+        }
+
+        getDoC() {
+            return this.doC;
+        }
+
+        setDoC() {
+            return this.doC = doC;
+        }
+
+        getChangeDoF() {
+            return this.doC + 33;
+        }
+
+        getChangeDoK() {
+            return this.doC + 273;
+        }
+    }
+
+    function check() {
+        let a = +document.getElementById('input3').value;
+        let temperature = new Temperature(a)
+        document.getElementById('changeF').innerHTML = "Độ F:  " + temperature.getChangeDoF();
+        document.getElementById('changeK').innerHTML = "Độ K:  " + temperature.getChangeDoK();
+    }
+
+</script>
+</body>
+</html>

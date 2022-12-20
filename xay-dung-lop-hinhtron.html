@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Circle{
+    radius;
+    color;
+    constructor(radius,color) {
+      this.radius=radius;
+      this.color=color;
+    }
+    getRadius(){
+      return this.radius;
+    }
+    setRadius(radius){
+      this.radius=radius;
+    }
+    getColor(){
+      return this.color;
+    }
+    setColor(color){
+      this.color=color;
+    }
+    getArea(){
+      return this.radius*this.radius* Math.PI
+    }
+    getChuvi(){
+        return this.radius*2*Math.PI
+    }
+    getTostring(){
+        return 'Chu vi hình tròn là:  '+this.getChuvi()+ '; Diện tichs hình tròn là: '+this.getArea();
+    }
+  }
+  let circle=new Circle(50,'red');
+  console.log('Bán kính hình tròn là: '+ circle.getRadius);
+  console.log('Chu vi hình tròn là: ' + circle.getChuvi());
+  console.log('Diện tichs hin tròn là:  '+ circle.getArea());
+
+</script>
+</body>
+</html>

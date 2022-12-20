@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<canvas id="Mycanvas" width="800px" height="600px" style="border: solid 3px red"></canvas>
+<script>
+    let canvas=document.getElementById('Mycanvas');
+    let ctx=canvas.getContext('2d');
+    //Hình1
+    ctx.beginPath();
+    ctx.fillStyle='green';
+    ctx.rect(50,0,200,100);
+    ctx.fill();
+    ctx.stroke()
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.strokeStyle='red';
+    ctx.arc(150,150,50,0,2*Math.PI,false);
+    ctx.stroke();
+    ctx.closePath();
+// Hình2
+    ctx.beginPath();
+    ctx.fillStyle='green';
+    ctx.rect(300,0,200,100);
+    ctx.fill();
+    ctx.stroke()
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.strokeStyle='red';
+    ctx.arc(400,150,50,0,2*Math.PI,false);
+    ctx.stroke();
+    ctx.closePath();
+//Hình3
+    ctx.beginPath();
+    ctx.fillStyle='green';
+    ctx.rect(550,0,200,100);
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.strokeStyle='red';
+    ctx.arc(650,150,50,0,2*Math.PI,false);
+    ctx.stroke();
+    ctx.closePath();
+
+//Hình4
+    ctx.beginPath();
+    ctx.fillStyle='green';
+    ctx.rect(50,500,200,100);
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.strokeStyle='red';
+    ctx.arc(150,450,50,0,2*Math.PI,false);
+    ctx.stroke();
+    ctx.closePath();
+//Hình5
+    ctx.beginPath();
+    ctx.fillStyle='green';
+    ctx.rect(300,500,200,100);
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath()
+    ctx.strokeStyle='red';
+    ctx.arc(400,450,50,0,2*Math.PI,false);
+    ctx.stroke();
+    ctx.closePath();
+
+//Hình6
+
+    ctx.beginPath();
+    ctx.fillStyle='green';
+    ctx.rect(550,500,200,100);
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.strokeStyle='red'
+    ctx.arc(650,450,50,0,2*Math.PI,false);
+    ctx.stroke();
+    ctx.closePath();
+
+</script>
+</body>
+</html>
